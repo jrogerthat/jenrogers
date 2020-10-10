@@ -1,7 +1,7 @@
 {
-  "name": "testcrud",
+  "name": "jenrogers",
   "version": "1.0.0",
-  "description": "Boilerplate for react",
+  "description": "personal web",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
