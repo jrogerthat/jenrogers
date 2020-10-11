@@ -1,17 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
 import colors from '../../colors.js';
+import Button from './Button.js';
+import {Link, BrowserRouter, Route, Switch} from 'react-router-dom';
+import About from '../About.js'
+import Landing from '../Landing/Landing';
 
 const StyledNav = styled.header`
   position: fixed;
   top: 0;
   left: 0;
-  background-color: ${colors.mintgreen};
+  background-color: ${colors.businessgrey};
   width: 100%;
   height: 4rem;
   nav {
     display: flex;
-    color: white;
+    width: 95%;
+    justify-content: flex-end;
+    color: gray;
+    padding-right:10rem;
     margin-right: 1rem;
     margin-top: -.5rem;
     h2 {
@@ -30,7 +37,7 @@ const StyledNav = styled.header`
         text-transform: uppercase;
         a {
           text-decoration: none;
-          color: white;
+          color: gray;
         }
         a:hover {
           text-decoration: underline;
@@ -44,16 +51,22 @@ class Navbar extends React.Component {
   render() {
     return (
       <>
+
         <StyledNav>
           <nav>
-            <h2>STOCK TRADER X</h2>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Team</a></li>
-            </ul>
+          <Link className="nav-link" to='/'><Button>Home</Button></Link>
+          <Link className="nav-link" to='/About'><Button>Who</Button></Link>
           </nav>
         </StyledNav>
+        <div>
+          <Switch>
+            <Route exact path='/' component={Landing} />
+            <Route exact path='/About' component={About} />
+            <Route render={function () {
+              return <p>Not found</p>
+            }} />
+          </Switch>
+        </div>
       </>
     )
   }
