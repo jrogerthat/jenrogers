@@ -20,12 +20,18 @@ module.exports = { // commonJS syntax
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader',
+        ],
+      },
     ]
   },
   plugins: [
     new htmlWebpack({
       //use the index.html file as our template to create the html in bundle
-      template: './src/index.html'
+      template: './public/index.html'
     })
   ]
 };

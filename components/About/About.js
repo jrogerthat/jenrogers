@@ -2,6 +2,7 @@
 import React from "react";
 import styled from 'styled-components';
 import colors from '../../colors.js';
+import Image from '../Image/Image.js';
 
 const StyledAbout = styled.div`
 
@@ -50,6 +51,7 @@ const About = () => {
         <h3>I am a 4th year PhD student with the Visualization Design Lab at the University of Utah, where I work with Alex Lex and Miriah Meyer. 
           Most of my research involves building visualization tools for biologists. Recently, I've been interested in traceability of insights from design studies. When I am not glued to my computer, you will most likely find me in the mountains or testing out new cheese jokes.</h3>
         </StyledAbout>
+        <Image></Image>
     </section>
   );
 };

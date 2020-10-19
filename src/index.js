@@ -8,4 +8,4 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 //enable service worker for offline-first by changing to 
 //serviceWorker.register();
-serviceWorker.unregister();
+serviceWorker.unregister();  
