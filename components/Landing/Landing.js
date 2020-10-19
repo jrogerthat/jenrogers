@@ -11,7 +11,6 @@ const StyledLanding = styled.div`
 
   width: 95%;
 
-
   padding-right:10rem;
   margin-right: 1rem;
   margin-top: 10rem;

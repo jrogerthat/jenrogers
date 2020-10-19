@@ -3,8 +3,9 @@ import styled from 'styled-components';
 import colors from '../../colors.js';
 import Button from './Button.js';
 import {Link, BrowserRouter, Route, Switch} from 'react-router-dom';
-import About from '../About.js'
+import About from '../About/About.js'
 import Landing from '../Landing/Landing';
+import Work from '../Work/Work.js';
 
 const StyledNav = styled.header`
   position: fixed;
@@ -51,17 +52,18 @@ class Navbar extends React.Component {
   render() {
     return (
       <>
-
         <StyledNav>
           <nav>
           <Link className="nav-link" to='/'><Button>Home</Button></Link>
           <Link className="nav-link" to='/About'><Button>Who</Button></Link>
+          <Link className="nav-link" to='/Work'><Button>What</Button></Link>
           </nav>
         </StyledNav>
         <div>
           <Switch>
             <Route exact path='/' component={Landing} />
             <Route exact path='/About' component={About} />
+            <Route exact path='/Work' component={Work} />
             <Route render={function () {
               return <p>Not found</p>
             }} />
