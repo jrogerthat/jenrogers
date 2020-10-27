@@ -2,27 +2,55 @@
 import React from "react";
 import styled from 'styled-components';
 import colors from '../../colors.js';
+import fontawesome from '../../fontawesome.js';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from './Image.js';
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faDesktop, faFilePdf, faPaperclip } from "@fortawesome/free-solid-svg-icons";
 
 const StyledWork = styled.div`
 
-background-color: ${colors.businessgrey};
 
-height: 4rem;
-
-width: 95%;
+width: 96%;
 
 padding-right:10rem;
 margin-right: 1rem;
 margin-top: 10rem;
 padding-left: 2rem;
 
+a{
+  text-decoration:none;
+  font-weight:500;
+}
+a:hover{
+  text-decoration:underline;
+}
+
+svg{
+  margin:3px;
+}
+
+p{
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+}
+
+div{
+  width:600px;
+  height:300px;
+  display:inline-block;
+  float:left;
+
+}
+
 h1 {
 
     margin-top: -3rem;
     align-items: center;
     width: 100rem;
-    font-size:6rem;
+    font-size: 5rem;
     font-family:'Roboto',sans-serif;
+    color: #696969;
    
   }
   h2{
@@ -32,14 +60,64 @@ h1 {
       font-weight:300;
       width: 55rem;
   }
+  h3{
+    display:block;
+    font-weight:300;
+  }
 }
 `;
 
 const Work = () => {
+
+  const Trevo = {
+    image: '../../public/assets/images/trevo-landing.png',
+    title: "Trevo",
+    link: "https://vdl.sci.utah.edu/Trevo/",
+    text: `<p>In collaboration with <a href="https://www.uidaho.edu/sci/biology">Evolutionary Biologists at the University of Idaho</a> as part of the NSF Mutlinet Project. Visual tool to identify patterns of evolution in phylogenetic tree data.</p>`,
+    github: 'https://github.com/visdesignlab/Trevo'
+  };
+  const Composer = {
+    image: '../../public/assets/images/composer.png',
+    title: "Composer",
+    link:"https://github.com/visdesignlab/Composer",
+    text: `<p>In collaboration with the University of Utah <a href="https://medicine.utah.edu/orthopaedics/" target="blank">Orthopedic Center</a> and <href="https://medicine.utah.edu/population-health-sciences/" target="blank">Population Sciences</a>. Visual cohort analysis for patient outcomes.</p>`,
+    github: 'https://github.com/visdesignlab/Composer'
+  };
+  const Trrrace = {
+    image: '../../public/assets/images/insights-landing.png',
+    title: "tRRRace",
+    link: "https://vdl.sci.utah.edu/trrrace/",
+    text: `Implementing the tRRRace construct with an interactive visualization to trace insight emergent in design studies.`,
+    github: 'https://github.com/visdesignlab/trrrace'
+  };
+
   return (
     <section className="Work">
         <StyledWork>
-        <h1>What I'm Working On</h1>
+        <h1>What I've been Working On</h1>
+        <div>
+          <a href="https://vdl.sci.utah.edu/publications/2020_infovis_insights/" target="blank"><Image work={Trrrace}/></a>
+          <h3>{Trrrace.title}</h3>
+          <p>{Trrrace.text}</p>
+          <a href={Trrrace.github}><FontAwesomeIcon icon={faGithub} size="2x"/></a>
+          <a href={Trrrace.link} target = "blank"><FontAwesomeIcon icon={faDesktop} size="2x"/></a>
+          <a href="https://vdl.sci.utah.edu/publications/2020_infovis_insights/" target="blank"><FontAwesomeIcon icon={faFilePdf} size="2x"/></a>
+        </div>
+        <div>
+          <a href={Trevo.link} target="blank"><Image work={Trevo}/></a>
+          <h3>{Trevo.title}</h3>
+          <p dangerouslySetInnerHTML={{__html:Trevo.text}}></p>
+          <a href={Trevo.github}><FontAwesomeIcon icon={faGithub} size="2x"/></a>
+          <a href={Trevo.link} target = "blank"><FontAwesomeIcon icon={faDesktop} size="2x"/></a>
+          <a href="https://vdl.sci.utah.edu/publications/2020_infovis_insights/" target="blank"><FontAwesomeIcon icon={faFilePdf} size="2x"/></a>
+        </div>
+        <div>
+          <a href="https://vdl.sci.utah.edu/publications/2019_aci_composer/" target="blank"><Image work={Composer}/></a>
+          <h3>{Composer.title}</h3>
+          <p dangerouslySetInnerHTML={{__html:Composer.text}}></p>
+          <a href={Composer.github}><FontAwesomeIcon icon={faGithub} size="2x"/></a>
+          <a href="https://vdl.sci.utah.edu/publications/2019_aci_composer/" target="blank"><FontAwesomeIcon icon={faFilePdf} size="2x"/></a>
+        </div>
         </StyledWork>
     </section>
   );

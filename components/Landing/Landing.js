@@ -18,11 +18,13 @@ const StyledLanding = styled.div`
 
   h1 {
 
-      margin-top: -3rem;
+      margin-top: -2rem;
+      margin-bottom:.7rem;
       align-items: center;
       width: 100rem;
       font-size:6rem;
       font-family:'Roboto',sans-serif;
+      color: ${colors.darkBlue};
      
     }
     h2{
