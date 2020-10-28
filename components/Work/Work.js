@@ -21,6 +21,7 @@ padding-left: 2rem;
 a{
   text-decoration:none;
   font-weight:500;
+  color: ${colors.darkBlue};
 }
 a:hover{
   text-decoration:underline;
@@ -50,7 +51,7 @@ h1 {
     width: 100rem;
     font-size: 5rem;
     font-family:'Roboto',sans-serif;
-    color: #696969;
+    color: ${colors.darkBlue};
    
   }
   h2{
@@ -94,7 +95,7 @@ const Work = () => {
   return (
     <section className="Work">
         <StyledWork>
-        <h1>What I've been Working On</h1>
+        <h1>What I've been working on...</h1>
         <div>
           <a href="https://vdl.sci.utah.edu/publications/2020_infovis_insights/" target="blank"><Image work={Trrrace}/></a>
           <h3>{Trrrace.title}</h3>

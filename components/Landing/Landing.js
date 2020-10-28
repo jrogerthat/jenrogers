@@ -5,8 +5,6 @@ import colors from '../../colors.js';
 
 const StyledLanding = styled.div`
 
-  background-color: ${colors.businessgrey};
-
   height: 4rem;
 
   width: 95%;
@@ -16,19 +14,28 @@ const StyledLanding = styled.div`
   margin-top: 10rem;
   padding-left: 2rem;
 
-  h1 {
+  a{
+    color: ${colors.darkBlue};
+    text-decoration: none;
+  }
+  a:hover{
+    text-decoration: underline;
+  }
 
+  h1 {
       margin-top: -2rem;
-      margin-bottom:.7rem;
+      margin-bottom:1.2rem;
       align-items: center;
       width: 100rem;
       font-size:6rem;
       font-family:'Roboto',sans-serif;
       color: ${colors.darkBlue};
-     
+    }
+    span{
+      color:blue;
     }
     h2{
-        margin-top: -2rem;
+        margin-top: -.7rem;
         font-size:2.5rem;
         font-family:'Roboto',sans-serif;
         font-weight:300;
@@ -37,8 +44,35 @@ const StyledLanding = styled.div`
   }
 `;
 
+const texts = [
+  'create',
+  'build',
+  'learn'
+];
+
 class Landing extends React.Component {
+
+  constructor() {
+    super();
+    this.state = { textIdx: 0 };
+  }
+
+  componentDidMount() {
+    this.timeout = setInterval(() => {
+      let currentIdx = this.state.textIdx;
+      this.setState({ textIdx: currentIdx + 1 });
+    }, 1500);
+  }
+
+  componentDidUnmount() {
+    clearInterval(this.timeout);
+  }
+
+
     render() {
+
+      let textThatChanges = texts[this.state.textIdx % texts.length];
+
       return (
         // <>
         <section className="Landing">
@@ -46,8 +80,8 @@ class Landing extends React.Component {
           <h1>
               Hi, I'm Jen. 
           </h1>
-          <h1>I like to build things.</h1>
-          <h2>PhD student with the Visualization Design Lab, Scientific Computing and Imaging Institute, University of Utah</h2>
+      <h1>I like to <span>{textThatChanges}</span> things.</h1>
+          <h2>PhD student with the <a href="https://vdl.sci.utah.edu/">Visualization Design Lab</a>, Scientific Computing and Imaging Institute, University of Utah</h2>
           </StyledLanding>
         </section>
           

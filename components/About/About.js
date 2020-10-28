@@ -3,12 +3,13 @@ import React from "react";
 import styled from 'styled-components';
 import colors from '../../colors.js';
 import Image from '../Image/Image.js';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faDesktop, faFilePdf, faPaperclip } from "@fortawesome/free-solid-svg-icons";
 
 const StyledAbout = styled.div`
 
-background-color: ${colors.businessgrey};
 
-height: 4rem;
 
 width: 95%;
 
@@ -21,6 +22,7 @@ a{
   text-decoration: none;
   color:${colors.darkBlue};
   font-weight:400;
+  display:inline;
 }
 
 a:hover {
@@ -28,9 +30,24 @@ a:hover {
   
 }
 
-h1 {
+div.contact{
+  display:inline;
+  float:left;
+  width:25rem;
+}
 
-    margin-bottom: -1.6rem;
+div.contact a {
+  width: 5rem;
+  display:inline;
+  font-family:'Roboto',sans-serif;
+  font-weight:400;
+  font-size:25px;
+  margin: 0 20px;
+}
+
+h1 {
+    margin-top:-.5rem;
+    margin-bottom: -1.5rem;
     align-items: center;
     width: 100rem;
     font-size:6rem;
@@ -73,6 +90,8 @@ const About = () => {
           <a href="https://vdl.sci.utah.edu/team/lex/" target ="blank"> Alex Lex</a> and <a href="http://www.cs.utah.edu/~miriah/" target="blank">Miriah Meyer</a>.
             Most of my research involves building visualization tools for biologists. Recently, I've been interested in traceability of insights from design studies. </h3>
            <h3> When I am not glued to my computer, you will most likely find me in the mountains or testing out new cheese jokes.</h3>
+
+           <div class="contact"><a href="mailto:jen@sci.utah.edu">Say Hi</a><a href="../../public/assets/JR-CV-2020.pdf" target="blank">See CV</a><a href="https://github.com/jrogerthat"><FontAwesomeIcon icon={faGithub} size="2x"/></a></div>
         </StyledSubDiv>
         
         </StyledAbout>
