@@ -91,7 +91,7 @@ const About = () => {
             Most of my research involves building visualization tools for biologists. Recently, I've been interested in traceability of insights from design studies. </h3>
            <h3> When I am not glued to my computer, you will most likely find me in the mountains or testing out new cheese jokes.</h3>
 
-           <div class="contact"><a href="mailto:jen@sci.utah.edu">Say Hi</a><a href="../../public/assets/JR-CV-2020.pdf" target="blank">See CV</a><a href="https://github.com/jrogerthat"><FontAwesomeIcon icon={faGithub} size="2x"/></a></div>
+           <div class="contact"><a href="mailto:jen@sci.utah.edu">Say Hi</a><a href="./public/assets/JR-CV-2020.pdf" target="blank">See CV</a><a href="https://github.com/jrogerthat"><FontAwesomeIcon icon={faGithub} size="2x"/></a></div>
         </StyledSubDiv>
         
         </StyledAbout>
