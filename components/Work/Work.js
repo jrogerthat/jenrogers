@@ -5,6 +5,10 @@ import colors from '../../colors.js';
 import fontawesome from '../../fontawesome.js';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from './Image.js';
+import trevoimage from '../../public/assets/images/trevo-landing.png';
+import compimage from '../../public/assets/images/composer.png';
+import trrraceimage from '../../public/assets/images/insights-landing.png';
+
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faDesktop, faFilePdf, faPaperclip } from "@fortawesome/free-solid-svg-icons";
 
@@ -71,21 +75,21 @@ h1 {
 const Work = () => {
 
   const Trevo = {
-    image: '../../public/assets/images/trevo-landing.png',
+    image: trevoimage,
     title: "Trevo",
     link: "https://vdl.sci.utah.edu/Trevo/",
     text: `<p>In collaboration with <a href="https://www.uidaho.edu/sci/biology">Evolutionary Biologists at the University of Idaho</a> as part of the NSF Mutlinet Project. Visual tool to identify patterns of evolution in phylogenetic tree data.</p>`,
     github: 'https://github.com/visdesignlab/Trevo'
   };
   const Composer = {
-    image: '../../public/assets/images/composer.png',
+    image: compimage,
     title: "Composer",
     link:"https://github.com/visdesignlab/Composer",
     text: `<p>In collaboration with the University of Utah <a href="https://medicine.utah.edu/orthopaedics/" target="blank">Orthopedic Center</a> and <href="https://medicine.utah.edu/population-health-sciences/" target="blank">Population Sciences</a>. Visual cohort analysis for patient outcomes.</p>`,
     github: 'https://github.com/visdesignlab/Composer'
   };
   const Trrrace = {
-    image: '../../public/assets/images/insights-landing.png',
+    image: trrraceimage,
     title: "tRRRace",
     link: "https://vdl.sci.utah.edu/trrrace/",
     text: `Implementing the tRRRace construct with an interactive visualization to trace insight emergent in design studies.`,
