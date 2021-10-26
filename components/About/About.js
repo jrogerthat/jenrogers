@@ -93,10 +93,10 @@ const About = () => {
 
            <div class="contact">
              <a href="mailto:jen@sci.utah.edu">jen (at) sci (dot) utah (dot) edu</a>
-             <a href="../../public/assets/JR-CV-2020.pdf" target="blank">See CV</a>
+             <a href="../../public/assets/JR-CV-2021.pdf" target="blank">See CV</a>
              <a href="https://github.com/jrogerthat"><FontAwesomeIcon icon={faGithub} size="2x"/></a>
              <a href="https://twitter.com/SocknessRogers"><FontAwesomeIcon icon={faTwitter} size="2x"></FontAwesomeIcon></a>
-             <a href="https://twitter.com/SocknessRogers"><FontAwesomeIcon icon={faStackOverflow} size="2x"></FontAwesomeIcon></a>
+             <a href="https://stackoverflow.com/users/4955343/sockness-rogers"><FontAwesomeIcon icon={faStackOverflow} size="2x"></FontAwesomeIcon></a>
             </div>
         </StyledSubDiv>
         

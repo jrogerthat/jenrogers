@@ -8,7 +8,7 @@ import Image from './Image.js';
 import trevoimage from '../../public/assets/images/trevo-landing.png';
 import compimage from '../../public/assets/images/composer.png';
 import trrraceimage from '../../public/assets/images/insights-landing.png';
-
+import covaimage from '../../public/assets/images/cova-landing.png';
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faDesktop, faFilePdf, faPaperclip } from "@fortawesome/free-solid-svg-icons";
 
@@ -95,11 +95,25 @@ const Work = () => {
     text: `Implementing the tRRRace construct with an interactive visualization to trace insight emergent in design studies.`,
     github: 'https://github.com/visdesignlab/trrrace'
   };
+  const Cova = {
+    image: covaimage,
+    title: "Cova",
+    link: "https://animationlab.utah.edu/cova",
+    text: `<p>In collaboration with <a href="https://animationlab.utah.edu/" target="blank">the Animation Lab</a>. We built a web-based, expert crowdsourcing tool to build a consensus model of the SARS-CoV2 Life Cycle.</p>`,
+    github: 'https://github.com/visdesignlab/coronavirus-annotation-3'
+  };
 
   return (
     <section className="Work">
         <StyledWork>
         <h1>What I've been working on...</h1>
+        <div>
+          <a href="https://animationlab.utah.edu/cova" target="blank"><Image work={Cova}/></a>
+          <h3>{Cova.title}</h3>
+          <p dangerouslySetInnerHTML={{__html:Cova.text}}></p>
+          <a href={Cova.github}><FontAwesomeIcon icon={faGithub} size="2x"/></a>
+          <a href={Cova.link} target = "blank"><FontAwesomeIcon icon={faDesktop} size="2x"/></a>
+        </div>
         <div>
           <a href="https://vdl.sci.utah.edu/publications/2020_infovis_insights/" target="blank"><Image work={Trrrace}/></a>
           <h3>{Trrrace.title}</h3>
