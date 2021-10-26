@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import colors from '../../colors.js';
 import Image from '../Image/Image.js';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faTwitter, faStackOverflow } from "@fortawesome/free-brands-svg-icons";
 import { faDesktop, faFilePdf, faPaperclip } from "@fortawesome/free-solid-svg-icons";
 
 const StyledAbout = styled.div`
@@ -20,20 +20,20 @@ padding-left: 2rem;
 
 a{
   text-decoration: none;
-  color:${colors.darkBlue};
+  color:black;
   font-weight:400;
   display:inline;
 }
 
 a:hover {
-  text-decoration: underline;
+  background-color:${colors.yellow}
   
 }
 
 div.contact{
   display:inline;
   float:left;
-  width:25rem;
+  width:60rem;
 }
 
 div.contact a {
@@ -52,7 +52,7 @@ h1 {
     width: 100rem;
     font-size:6rem;
     font-family:'Roboto',sans-serif;
-    color:${colors.darkBlue};
+    color:${colors.gunmetal};
    
   }
   h2{
@@ -91,7 +91,13 @@ const About = () => {
             Most of my research involves building visualization tools for biologists. Recently, I've been interested in traceability of insights from design studies. </h3>
            <h3> When I am not glued to my computer, you will most likely find me in the mountains or testing out new cheese jokes.</h3>
 
-           <div class="contact"><a href="mailto:jen@sci.utah.edu">Say Hi</a><a href="./public/assets/JR-CV-2020.pdf" target="blank">See CV</a><a href="https://github.com/jrogerthat"><FontAwesomeIcon icon={faGithub} size="2x"/></a></div>
+           <div class="contact">
+             <a href="mailto:jen@sci.utah.edu">jen (at) sci (dot) utah (dot) edu</a>
+             <a href="../../public/assets/JR-CV-2020.pdf" target="blank">See CV</a>
+             <a href="https://github.com/jrogerthat"><FontAwesomeIcon icon={faGithub} size="2x"/></a>
+             <a href="https://twitter.com/SocknessRogers"><FontAwesomeIcon icon={faTwitter} size="2x"></FontAwesomeIcon></a>
+             <a href="https://twitter.com/SocknessRogers"><FontAwesomeIcon icon={faStackOverflow} size="2x"></FontAwesomeIcon></a>
+            </div>
         </StyledSubDiv>
         
         </StyledAbout>

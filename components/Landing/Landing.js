@@ -14,12 +14,15 @@ const StyledLanding = styled.div`
   margin-top: 10rem;
   padding-left: 2rem;
 
+  color:${colors.charleston}
+
   a{
-    color: ${colors.darkBlue};
+    color:${colors.charleston}
     text-decoration: none;
+    font-weight:500;
   }
   a:hover{
-    text-decoration: underline;
+    background-color:${colors.yellow}
   }
 
   h1 {
@@ -29,10 +32,13 @@ const StyledLanding = styled.div`
       width: 100rem;
       font-size:6rem;
       font-family:'Roboto',sans-serif;
-      color: ${colors.darkBlue};
+      color: ${colors.gunmetal};
     }
     span{
-      color:blue;
+      color:${colors.charleston};
+      background-color:${colors.yellow};
+      padding-left:10px;
+      padding-right:10px;
     }
     h2{
         margin-top: -.7rem;
@@ -80,7 +86,7 @@ class Landing extends React.Component {
           <h1>
               Hi, I'm Jen. 
           </h1>
-      <h1>I like to <span>{textThatChanges}</span> things.</h1>
+      <h1>I like to <span> {textThatChanges}</span> things.</h1>
           <h2>PhD student with the <a href="https://vdl.sci.utah.edu/">Visualization Design Lab</a>, Scientific Computing and Imaging Institute, University of Utah</h2>
           </StyledLanding>
         </section>

@@ -25,10 +25,10 @@ padding-left: 2rem;
 a{
   text-decoration:none;
   font-weight:500;
-  color: ${colors.darkBlue};
+  color: ${colors.gunmetal};
 }
 a:hover{
-  text-decoration:underline;
+  background-color:${colors.yellow}
 }
 
 svg{
@@ -55,7 +55,7 @@ h1 {
     width: 100rem;
     font-size: 5rem;
     font-family:'Roboto',sans-serif;
-    color: ${colors.darkBlue};
+    color: ${colors.gunmetal};
    
   }
   h2{
