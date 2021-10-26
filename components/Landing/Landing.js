@@ -60,7 +60,8 @@ const texts = [
   'build',
   'code',
   'hack',
-  'learn'
+  'learn',
+  'climb/ski'
 ];
 
 class Landing extends React.Component {
