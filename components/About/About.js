@@ -13,6 +13,9 @@ const StyledAbout = styled.div`
 
 width: 95%;
 
+background-image: radial-gradient(circle at 1px 1px, ${colors.charleston} 1px, transparent 0);
+background-size: 40px 40px;
+
 padding-right:10rem;
 margin-right: 1rem;
 margin-top: 8rem;

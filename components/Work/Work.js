@@ -17,10 +17,14 @@ const StyledWork = styled.div`
 
 width: 96%;
 
+height:50rem:
+
 padding-right:10rem;
 margin-right: 1rem;
-margin-top: 10rem;
+padding-top: 10rem;
 padding-left: 2rem;
+
+
 
 a{
   text-decoration:none;

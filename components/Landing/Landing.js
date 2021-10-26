@@ -5,16 +5,20 @@ import colors from '../../colors.js';
 
 const StyledLanding = styled.div`
 
-  height: 4rem;
+  height: 45rem;
 
   width: 95%;
 
   padding-right:10rem;
   margin-right: 1rem;
-  margin-top: 10rem;
+  margin-top:5rem;
   padding-left: 2rem;
+  padding-top:5rem;
 
   color:${colors.charleston}
+
+  background-image: radial-gradient(circle at 1px 1px, ${colors.charleston} 1px, transparent 0);
+  background-size: 40px 40px;
 
   a{
     color:${colors.charleston}
@@ -52,7 +56,10 @@ const StyledLanding = styled.div`
 
 const texts = [
   'create',
+  'sketch',
   'build',
+  'code',
+  'hack',
   'learn'
 ];
 
