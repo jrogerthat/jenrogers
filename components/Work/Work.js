@@ -151,6 +151,14 @@ const Work = () => {
     github: 'https://github.com/visdesignlab/coronavirus-annotation-3'
   };
 
+  const AutoML = {
+    image: covaimage,
+    title: "Tracing and Visualizing Human-ML/AI Collaborative Processes through Artifacts of Data Work",
+    link: "https://animationlab.utah.edu/cova",
+    text: `<p>In collaboration with <a href="" target="blank">Tableau Research</a>. We built a web-based, expert crowdsourcing tool to build a consensus model of the SARS-CoV2 Life Cycle.</p>`,
+    github: 'https://github.com/visdesignlab/coronavirus-annotation-3'
+  };
+
   return (
     <section className="Work">
           <CV>
@@ -158,7 +166,7 @@ const Work = () => {
           <div>
             <h2>Education</h2>
             <div class="cv-sub">
-              <h3>(2017 - Current) Ph.D. Human-Centered Computing,</h3>
+              <h3>(2017 - 2022) Ph.D. Human-Centered Computing,</h3>
               <p> Scientific Computing and Imaging Institute, University of Utah</p>
             </div>
             <div class="cv-sub">
@@ -175,6 +183,16 @@ const Work = () => {
           <div>
           <h2>Projects</h2>
           <StyledWork>
+          <div class="cv-sub">
+          <a href="" target="blank"><Image work={AutoML}/></a>
+          <h3>{AutoML.title}  <a href={AutoML.github}><FontAwesomeIcon icon={faGithub} /></a>
+          <a href={AutoML.link} target = "blank"><FontAwesomeIcon icon={faDesktop} /></a></h3>
+          <p dangerouslySetInnerHTML={{__html:AutoML.text}}></p>
+          {/* <a href={Cova.github}><FontAwesomeIcon icon={faGithub} size="2x"/></a>
+          <a href={Cova.link} target = "blank"><FontAwesomeIcon icon={faDesktop} size="2x"/></a> */}
+          <p>Skills applied: requirements gathering, semi-structured interviews, mock-ups (Illustrator),
+web development (JavaScript, D3.js, HTML5, CSS), Python for image data processing</p>
+        </div>
           <div class="cv-sub">
           <a href="https://animationlab.utah.edu/cova" target="blank"><Image work={Cova}/></a>
           <h3>{Cova.title}  <a href={Cova.github}><FontAwesomeIcon icon={faGithub} /></a>

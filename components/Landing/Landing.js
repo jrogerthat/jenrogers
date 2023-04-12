@@ -5,19 +5,23 @@ import colors from '../../colors.js';
 
 const StyledLanding = styled.div`
 
-  height: 45rem;
-
-  width: 95%;
+  
+  background-color:${colors.backgroundOffWhite};
 
   padding-right:10rem;
   margin-right: 1rem;
-  margin-top:5rem;
+
   padding-left: 2rem;
-  padding-top:5rem;
+  padding-top:10rem;
+
+  display:flex;
+  flex-direction:column;
+  flex:1;
+  
 
   color:${colors.charleston}
 
-  background-image: radial-gradient(circle at 1px 1px, ${colors.charleston} 1px, transparent 0);
+  background-image: radial-gradient(circle at 1.5px 1.5px, ${colors.charleston} 1px, transparent 0);
   background-size: 40px 40px;
 
   a{
@@ -49,7 +53,7 @@ const StyledLanding = styled.div`
         font-size:2.5rem;
         font-family:'Roboto',sans-serif;
         font-weight:300;
-        width: 55rem;
+        width: 62rem;
     }
   }
 `;
@@ -89,15 +93,16 @@ class Landing extends React.Component {
 
       return (
         // <>
-        <section className="Landing">
+        // <div className="Landing">
         <StyledLanding>
           <h1>
               Hi, I'm Jen. 
           </h1>
-      <h1>I like to <span> {textThatChanges}</span> things.</h1>
-          <h2>PhD student with the <a href="https://vdl.sci.utah.edu/">Visualization Design Lab</a>, Scientific Computing and Imaging Institute, University of Utah</h2>
+          <h1>I like to <span> {textThatChanges}</span> things.</h1>
+          {/* <h2>postdoctoral reseracher with the <a href="https://vdl.sci.utah.edu/">Visualization Design Lab</a>, Scientific Computing and Imaging Institute, University of Utah</h2> */}
+          <h2>Postdoctoral researcher with the <a href="https://valt.cs.tufts.edu/" target='blank'>Visual Analytics Lab</a>, Tufts and the <a href="https://www.merck.com/stories/why-were-expanding-and-investing-in-our-research-and-discovery-efforts/" target='blank'>Exploratory Science Center</a>, Merck</h2>
           </StyledLanding>
-        </section>
+        // </div>
           
         // </>
       )

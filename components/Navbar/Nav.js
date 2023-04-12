@@ -11,7 +11,7 @@ const StyledNav = styled.header`
   position: fixed;
   top: 0;
   left: 0;
-  background-color: ${colors.businessgrey};
+  background-color: ${colors.backgroundOffWhite};
   width: 100%;
   height: 4rem;
   nav {
@@ -59,9 +59,9 @@ class Navbar extends React.Component {
           <Link className="nav-link" to='/Work'><Button>What</Button></Link>
           </nav>
         </StyledNav>
-        <div>
+        <div className='wrap' style={{display:'flex', flexDirection:'column', flex:1, height:'100%', backgroundColor: colors.backgroundOffWhite}}>
           <Switch>
-            <Route exact path='/' component={Landing} />
+            <Route exact path='/' component={Landing}/>
             <Route exact path='/About' component={About} />
             <Route exact path='/Work' component={Work} />
             <Route render={function () {

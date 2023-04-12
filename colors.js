@@ -5,7 +5,8 @@ const colors = {
   darkBlue: '#191970',
   yellow: '#FEDE00',
   gunmetal: '#53565A',
-  charleston: '#232b2b'
+  charleston: '#232b2b',
+  backgroundOffWhite: '#fcfbf7'
 }
 
 module.exports = colors;

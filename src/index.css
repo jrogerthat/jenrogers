@@ -1,9 +1,24 @@
 /*
   Global reset styles
 */
-body {
+html, body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  height: 100%;
+  width: 100%;
 }
+
+.App{
+  display: flex;
+  flex-direction: column;
+  flex:1;
+  background-color: #fcfbf7;
+}
+
+#root{
+  height:100%;
+}
+
+
 
