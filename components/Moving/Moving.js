@@ -14,6 +14,7 @@ const StyledVid = styled.video`
     margin-left: 20px;
     float:left;
     display:inline-block;
+    margin-top:40px;
 `;
 
 const Moving = ()=>{

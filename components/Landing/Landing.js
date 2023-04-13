@@ -1,12 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 import colors from '../../colors.js';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faTwitter, faStackOverflow } from "@fortawesome/free-brands-svg-icons";
+import Moving from '../Moving/Moving.js';
 
+const StyledWrap = styled.div`
+background-color:${colors.backgroundOffWhite};
+background-image: radial-gradient(circle at 1.5px 1.5px, ${colors.gray} 1px, transparent 0);
+  background-size: 40px 40px;
+`
 
 const StyledLanding = styled.div`
 
-  
-  background-color:${colors.backgroundOffWhite};
+  // background-color:${colors.backgroundOffWhite};
 
   padding-right:10rem;
   margin-right: 1rem;
@@ -18,11 +25,10 @@ const StyledLanding = styled.div`
   flex-direction:column;
   flex:1;
   
-
   color:${colors.charleston}
 
-  background-image: radial-gradient(circle at 1.5px 1.5px, ${colors.charleston} 1px, transparent 0);
-  background-size: 40px 40px;
+  // background-image: radial-gradient(circle at 1.5px 1.5px, ${colors.gray} 1px, transparent 0);
+  // background-size: 40px 40px;
 
   a{
     color:${colors.charleston}
@@ -68,45 +74,29 @@ const texts = [
   'climb/ski'
 ];
 
-class Landing extends React.Component {
+const Landing = () => {
 
-  constructor() {
-    super();
-    this.state = { textIdx: 0 };
-  }
-
-  componentDidMount() {
-    this.timeout = setInterval(() => {
-      let currentIdx = this.state.textIdx;
-      this.setState({ textIdx: currentIdx + 1 });
-    }, 1500);
-  }
-
-  componentDidUnmount() {
-    clearInterval(this.timeout);
-  }
-
-
-    render() {
-
-      let textThatChanges = texts[this.state.textIdx % texts.length];
-
-      return (
-        // <>
-        // <div className="Landing">
-        <StyledLanding>
-          <h1>
-              Hi, I'm Jen. 
-          </h1>
-          <h1>I like to <span> {textThatChanges}</span> things.</h1>
-          {/* <h2>postdoctoral reseracher with the <a href="https://vdl.sci.utah.edu/">Visualization Design Lab</a>, Scientific Computing and Imaging Institute, University of Utah</h2> */}
-          <h2>Postdoctoral researcher with the <a href="https://valt.cs.tufts.edu/" target='blank'>Visual Analytics Lab</a>, Tufts and the <a href="https://www.merck.com/stories/why-were-expanding-and-investing-in-our-research-and-discovery-efforts/" target='blank'>Exploratory Science Center</a>, Merck</h2>
-          </StyledLanding>
-        // </div>
-          
-        // </>
-      )
-    }
-  }
+  return(
+  <StyledWrap>
+  <Moving />
+  <StyledLanding>
+      <h1>Hi, I'm Jen. </h1>
+       {/* <h1>I like to <span> {textThatChanges}</span> things.</h1> */}
+      <h2>Postdoctoral researcher with the <a href="https://valt.cs.tufts.edu/" target='blank'>Visual Analytics Lab</a>, Tufts and the <a href="https://www.merck.com/stories/why-were-expanding-and-investing-in-our-research-and-discovery-efforts/" target='blank'>Exploratory Science Center</a>, Merck</h2>
+      <div className="contact" style={{display:'flex', width:600, flexDirection:'row', justifyContent:'space-between', alignItems:'center'}}>
+        <a 
+        style={{fontWeight:400, fontFamily:'lato'}}
+        href="mailto:jennifer.rogers@tufts.edu">jennifer (dot) rogers (at) tufts (dot) edu</a>
+        <a 
+        style={{fontWeight:400, fontFamily:'lato'}}
+        href="../../public/assets/JR-CV-2023.pdf" target="blank">See CV</a>
+        <a href="https://github.com/jrogerthat"><FontAwesomeIcon icon={faGithub} size="2x"/></a>
+        <a href="https://twitter.com/SocknessRogers"><FontAwesomeIcon icon={faTwitter} size="2x"></FontAwesomeIcon></a>
+        <a href="https://stackoverflow.com/users/4955343/sockness-rogers"><FontAwesomeIcon icon={faStackOverflow} size="2x"></FontAwesomeIcon></a>
+      </div>
+    </StyledLanding>
+    </StyledWrap>
+  )
+}
   
   export default Landing;
