@@ -22,9 +22,9 @@ const Navbar = ({setView}) => {
             <div class="btn btn9" onClick={() => setView("work")}>
             <h4>Work</h4>
             </div>
-            <div class="btn btn9" onClick={() => setView("fun")}>
+            <a a href="http://thechor.us/index.html#work" target='blank'><div class="btn btn9">
             <h4>Fun</h4>
-            </div>
+            </div></a>
         </StyledNav>
     )
 }

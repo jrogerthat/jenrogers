@@ -19,7 +19,10 @@ const StyledVid = styled.video`
 
 const Moving = ()=>{
   //return <StyledVid onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;"><source src={moving} type="video/ogg"></source></StyledVid>
-  return <StyledVid className="video-container video-container-overlay" autoPlay="true" loop="" muted="" data-reactid=".0.1.0.0">
+  return <StyledVid 
+  onMouseOver={event => event.target.play()}
+  className="video-container video-container-overlay" 
+  autoPlay="true" loop="" muted="" data-reactid=".0.1.0.0">
   <source type="video/mp4" data-reactid=".0.1.0.0.0" src={moving}></source>
   </StyledVid>
 }

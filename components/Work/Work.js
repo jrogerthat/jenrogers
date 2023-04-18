@@ -21,13 +21,19 @@ width:100%;
 background-color:${colors.backgroundOffWhite};
 background-image: radial-gradient(circle at 1.5px 1.5px, ${colors.gray} 1px, transparent 0);
 background-size: 40px 40px;
+height:2700px;
 
-width:95%;
+// color: ${colors.gray};
+
 display:flex;
 flex-direction:column;
 padding-left: 55px;
 
 h1{
+    font-family: lato;
+}
+
+h2 {
     font-family: lato;
 }
 
@@ -53,7 +59,7 @@ a{
   }
   
   p{
-    font-family:'Roboto',sans-serif;
+    font-family: lato;
     font-weight:300;
   }
 
@@ -62,9 +68,10 @@ a{
 const workData = [
     {
         sectionTitle: "Traceability",
+        sectDescription: "Work focused on traceability of designn-oriented, subjective, and human-centered processes.",
         data: [
             {
-                image: '../../public/assets/images/trevo-pair.png',
+                image: '../../public/assets/images/proto-demo-720.mov',
                 // 'public/assets/images/trevo-landing.png',//covaimage,
                 title: "Tracing and Visualizing Human-ML/AI Collaborative Processes through Artifacts of Data Work",
                 link: null,
@@ -99,6 +106,7 @@ const workData = [
     },
     {
         sectionTitle: "Design Studies",
+        sectDescription: "Applied visualization research.",
         data: [{
             image: '../../public/assets/images/trevo-pair.mov',//trevoimage,
             title: "Trevo",
@@ -138,12 +146,14 @@ const workData = [
 ]
 
 const StyledVid = styled.video`
-    width:360px;
+    width:560px;
     height:auto;
-    margin-left: 20px;
     float:left;
     display:inline-block;
     margin-top:40px;
+    border-radius:20px;
+    border: 1px solid gray;
+    box-shadow: 0 19px 51px 0 rgba(0,0,0,0.16), 0 14px 19px 0 rgba(0,0,0,0.07);
 `;
 
 const Moving = (moving)=>{
@@ -152,37 +162,45 @@ const Moving = (moving)=>{
   className="video-container video-container-overlay" 
   onMouseOver={event => event.target.play()}
   onMouseOut={event => event.target.pause()}
-  autoPlay="true" loop="" muted="" 
+  autoPlay={false} 
+  loop="" muted={true}
   data-reactid=".0.1.0.0">
   <source type="video/mp4" 
   data-reactid=".0.1.0.0.0" src={moving}></source>
   </StyledVid>
-//     onMouseOver={event => event.target.play()}
-//   onMouseOut={event => event.target.pause()}
 }
 
 const Work = () => {
 
   return(
   <StyledWrap>
+    <div style={{marginTop:50, marginBottom:50, fontFamily:'lato'}}>
+        <h3>
+        For a full picture, look at my <a 
+        style={{fontWeight:900}}
+        href="../../public/assets/JR-CV-2023.pdf" target="blank">CV</a>
+        </h3>
+    </div>
     <div>
         <h1>Projects</h1>
     </div>
     {
         workData.map((w, i) => (
-            <div key={`proj-${i}`} style={{width:'90%'}} >
+            <div key={`proj-${i}`} style={{width:'90%', paddingBottom:50, borderTop: `1px solid ${colors.gray}`}} >
                 <h2>{w.sectionTitle}</h2>
+                <p style={{fontSize:18, fontFamily:'lato'}}>{w.sectDescription}</p>
                 <div style={{display:'flex', flexDirection:'column', width:'90%'}}>
                     {w.data.map((m, j)=> (
-                        <div key={`data-${j}`}>
-                            <div><a href="" target="blank">
+                        <div key={`data-${j}`} style={{display:'flex', flexDirection:'row', alignItems:'center'}}>
+                            <div style={{paddingRight:50}}>
+                                <a href="" target="blank">
                                 {/* <Image work={m.image}/></a> */}
                                 {/* <img src={'../../public/assets/images/trevo-landing.png'} /> */}
                                 {Moving(m.image)}
                                 </a>
-                                </div>
+                            </div>
                              <div>
-                                <h3>{m.title}</h3>
+                                <h2>{m.title}</h2>
                                 <p dangerouslySetInnerHTML={{__html:m.text}}></p>
                                 <div style={{display:'flex', flexDirection:'row', alignItems:'center'}}>
                                 {
