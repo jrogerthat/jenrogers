@@ -9,6 +9,7 @@ const StyledWrap = styled.div`
 background-color:${colors.backgroundOffWhite};
 background-image: radial-gradient(circle at 1.5px 1.5px, ${colors.gray} 1px, transparent 0);
   background-size: 40px 40px;
+  padding-left:20px;
 `
 
 const StyledLanding = styled.div`
@@ -16,6 +17,7 @@ const StyledLanding = styled.div`
   // background-color:${colors.backgroundOffWhite};
 
   padding-right:10rem;
+  padding-left:20px;
   margin-right: 1rem;
 
   padding-left: 2rem;

@@ -9,6 +9,7 @@ const StyledNav = styled.div`
   display:flex;
   flex-direction:row;
   align-items:end;
+  margin-top:10px
 `;
 
 const Navbar = ({setView}) => {

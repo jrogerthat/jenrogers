@@ -12,7 +12,7 @@ const StyledApp = styled.div`
   display: flex;
   flex-direction:column;
   height:100%;
-
+  width:100vw;
 `;
 
 
@@ -31,19 +31,19 @@ const App = () => {
 const Main = ({view}) => {
   if(view === 'work'){
     return(
-      <div style={{display:'flex', flex:1, height:'100%'}}>
+      <div style={{display:'flex', flex:1, height:'100%', width:'100%'}}>
         <Work />
       </div>
     )
   }else if(view === 'fun'){
     return(
-      <div style={{display:'flex', flex:1, height:'100%'}}>
+      <div style={{display:'flex', flex:1, height:'100%', width:'100%'}}>
         {'fun'}
       </div>
     )
   }
   return (
-    <div style={{display:'flex', flex:1, height:'100%'}}>
+    <div style={{display:'flex', flex:1, height:'100%', width:'100%'}}>
     <Landing />
   </div>
   )
