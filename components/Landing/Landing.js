@@ -4,7 +4,7 @@ import colors from '../../colors.js';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faTwitter, faStackOverflow } from "@fortawesome/free-brands-svg-icons";
 import Moving from '../Moving/Moving.js';
-import cv from '../../public/assets/JR-CV-2023.pdf';
+import cv from '../../public/assets/JRCV2023.pdf';
 
 const StyledWrap = styled.div`
 background-color:${colors.backgroundOffWhite};
@@ -90,9 +90,8 @@ const Landing = () => {
         <a 
         style={{fontWeight:400, fontFamily:'lato'}}
         href="mailto:jennifer.rogers@tufts.edu">jennifer (dot) rogers (at) tufts (dot) edu</a>
-        <a 
-        style={{fontWeight:400, fontFamily:'lato'}}
-        href={cv} target="blank">See CV</a>
+        <a href = {cv} target="blank">See CV</a>
+        {/* <span onClick={() => window.open(cv)}>See CV</span> */}
         <a href="https://github.com/jrogerthat"><FontAwesomeIcon icon={faGithub} size="2x"/></a>
         <a href="https://twitter.com/SocknessRogers"><FontAwesomeIcon icon={faTwitter} size="2x"></FontAwesomeIcon></a>
         <a href="https://stackoverflow.com/users/4955343/sockness-rogers"><FontAwesomeIcon icon={faStackOverflow} size="2x"></FontAwesomeIcon></a>

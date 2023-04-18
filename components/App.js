@@ -3,7 +3,6 @@ import Navbar from './Navbar/Nav';
 import colors from '../colors';
 import styled from 'styled-components';
 import Landing from './Landing/Landing';
-import About from './About/About';
 import Work from './Work/Work';
 
 const StyledApp = styled.div`

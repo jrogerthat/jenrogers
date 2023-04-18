@@ -21,7 +21,7 @@ module.exports = { // commonJS syntax
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|svg|jpg|gif|mov)$/,
+        test: /\.(png|svg|jpg|gif|mov|pdf)$/,
         use: [
           'file-loader',
         ],

@@ -11,7 +11,8 @@ import trrraceMov from '../../public/assets/images/trrrace-hover.mov';
 import trrracerMov from '../../public/assets/images/trrracer-hover.mov';
 import autoimage from '../../public/assets/images/proto-demo-720.mov';
 import covaMov from '../../public/assets/images/cova-hover.mov';
-import cv from '../../public/assets/JR-CV-2023.pdf';
+import cv from '../../public/assets/JRCV2023.pdf';
+
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faDesktop, faFilePdf, faPaperclip } from "@fortawesome/free-solid-svg-icons";
 
@@ -182,9 +183,7 @@ const Work = () => {
   <StyledWrap>
     <div style={{marginTop:50, marginBottom:50, fontFamily:'lato'}}>
         <h3>
-        For a full picture, look at my <a 
-        style={{fontWeight:900}}
-        href={cv} target="blank">CV</a>
+        For a full picture, look at my <a href={`${cv}`} target="blank">CV</a>
         </h3>
     </div>
     <div>
