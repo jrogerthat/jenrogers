@@ -3,10 +3,15 @@ import styled from 'styled-components';
 import colors from '../../colors.js';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from './Image.js';
-import trevoimage from '../../public/assets/images/trevo-landing.png';
+import trevoMov from '../../public/assets/images/trevo-pair.mov';
+
 import compimage from '../../public/assets/images/composer.png';
-import trrraceimage from '../../public/assets/images/insights-landing.png';
-import covaimage from '../../public/assets/images/cova-landing.png';
+
+import trrraceMov from '../../public/assets/images/trrrace-hover.mov';
+import trrracerMov from '../../public/assets/images/trrracer-hover.mov';
+import autoimage from '../../public/assets/images/proto-demo-720.mov';
+import covaMov from '../../public/assets/images/cova-hover.mov';
+import cv from '../../public/assets/JR-CV-2023.pdf';
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faDesktop, faFilePdf, faPaperclip } from "@fortawesome/free-solid-svg-icons";
 
@@ -70,8 +75,9 @@ const workData = [
         sectionTitle: "Traceability",
         sectDescription: "Work focused on traceability of designn-oriented, subjective, and human-centered processes.",
         data: [
-            {
-                image: '../../public/assets/images/proto-demo-720.mov',
+            {   
+                image: autoimage,
+                // image: '../../public/assets/images/proto-demo-720.mov',
                 // 'public/assets/images/trevo-landing.png',//covaimage,
                 title: "Tracing and Visualizing Human-ML/AI Collaborative Processes through Artifacts of Data Work",
                 link: null,
@@ -81,7 +87,7 @@ const workData = [
                 preprint: 'https://arxiv.org/abs/2304.02699'
             },
             {
-                image: '../../public/assets/images/trrracer-hover.mov',
+                image: trrracerMov,//'../../public/assets/images/trrracer-hover.mov',
                 title: "tRRRaceR",
                 link: "https://vdl.sci.utah.edu/Trevo/",
                 text: `<p>In collaboration with <a href="https://www.uidaho.edu/sci/biology">Evolutionary Biologists at the University of Idaho</a> as part of the NSF Mutlinet Project. Visual tool to identify patterns of evolution in phylogenetic tree data.</p>`,
@@ -90,7 +96,7 @@ const workData = [
                 preprint: null
             },
             {
-                image: '../../public/assets/images/trrrace-hover.mov',
+                image: trrraceMov,//'../../public/assets/images/trrrace-hover.mov',
                 title: "tRRRace",
                 link: "https://vdl.sci.utah.edu/trrrace/",
                 text: `Implementing the tRRRace construct with an interactive visualization to trace insight emergent in design studies.`,
@@ -108,7 +114,7 @@ const workData = [
         sectionTitle: "Design Studies",
         sectDescription: "Applied visualization research.",
         data: [{
-            image: '../../public/assets/images/trevo-pair.mov',//trevoimage,
+            image: trevoMov,//'../../public/assets/images/trevo-pair.mov',//trevoimage,
             title: "Trevo",
             link: "https://vdl.sci.utah.edu/Trevo/",
             text: `<p>In collaboration with <a href="https://www.uidaho.edu/sci/biology">Evolutionary Biologists at the University of Idaho</a> as part of the NSF Mutlinet Project. Visual tool to identify patterns of evolution in phylogenetic tree data.</p>`,
@@ -119,7 +125,7 @@ const workData = [
             preprint: 'https://par.nsf.gov/servlets/purl/10208637'
           },
           {
-            image: '../../public/assets/images/cova-hover.mov',
+            image: covaMov,
             title: "Cova",
             link: "https://animationlab.utah.edu/cova",
             text: `<p>In collaboration with <a href="https://animationlab.utah.edu/" target="blank">the Animation Lab</a>. We built a web-based, expert crowdsourcing tool to build a consensus model of the SARS-CoV2 Life Cycle.</p>`,
@@ -178,7 +184,7 @@ const Work = () => {
         <h3>
         For a full picture, look at my <a 
         style={{fontWeight:900}}
-        href="../../public/assets/JR-CV-2023.pdf" target="blank">CV</a>
+        href={cv} target="blank">CV</a>
         </h3>
     </div>
     <div>
